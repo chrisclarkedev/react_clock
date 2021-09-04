@@ -3,13 +3,6 @@ import Clock from './components/Clock';
 import './App.css';
 
 function App() {
-  return (
-    <>
-      <div>
-        <h1>Testing Testing 123</h1>
-      </div>
-      <Clock />
-    </>
-  );
+  return <Clock />;
 }
 export default App;

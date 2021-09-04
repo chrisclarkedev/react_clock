@@ -2,17 +2,10 @@ import React from 'react';
 
 function Clock() {
   return (
-    <div className="Clock">
-      {/* Hand that shows hour */}
+    <div className="clock">
       <div className="hand hour"></div>
-
-      {/* Hand that shows minute */}
       <div className="hand minute"></div>
-
-      {/* Hand that shows seconds */}
       <div className="hand second"></div>
-
-      {/* Each hour of the clock in # */}
       <div className="number number1">
         <div>1</div>
       </div>
