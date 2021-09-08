@@ -1,11 +1,25 @@
 import React from 'react';
 
-function Clock() {
+function Clock({ hoursTimer, minutesTimer, secondsTimer }) {
   return (
     <div className="clock">
-      <div className="hand hour"></div>
-      <div className="hand minute"></div>
-      <div className="hand second"></div>
+      {/* Centering of Hour Hands, followed by roatation */}
+      <div
+        className="hand hour"
+        style={{ transform: `translate(-50%) rotate(${hoursTimer * 360}deg)` }}
+      ></div>
+      <div
+        className="hand minute"
+        style={{
+          transform: `translate(-50%) rotate(${minutesTimer * 360}deg)`,
+        }}
+      ></div>
+      <div
+        className="hand second"
+        style={{
+          transform: `translate(-50%) rotate(${secondsTimer * 360}deg)`,
+        }}
+      ></div>
       <div className="number number1">
         <div>1</div>
       </div>

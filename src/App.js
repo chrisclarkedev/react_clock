@@ -33,7 +33,16 @@ class App extends Component {
   };
 
   render() {
-    return <Clock />;
+    // Set seconds minutes and hours into state
+    const { secondsTimer, minutesTimer, hoursTimer } = this.state;
+    // Pass in props seconds, minutes and hours
+    return (
+      <Clock
+        secondsTimer={secondsTimer}
+        minutesTimer={minutesTimer}
+        hoursTimer={hoursTimer}
+      />
+    );
   }
 }
 
