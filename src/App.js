@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './components/Clock';
+import DarkMode from './components/DarkMode';
 import './App.css';
 import { render } from 'react-dom';
 
@@ -37,11 +38,16 @@ class App extends Component {
     const { secondsTimer, minutesTimer, hoursTimer } = this.state;
     // Pass in props seconds, minutes and hours
     return (
-      <Clock
-        secondsTimer={secondsTimer}
-        minutesTimer={minutesTimer}
-        hoursTimer={hoursTimer}
-      />
+      <>
+        <div>
+          <DarkMode />
+          <Clock
+            secondsTimer={secondsTimer}
+            minutesTimer={minutesTimer}
+            hoursTimer={hoursTimer}
+          />
+        </div>
+      </>
     );
   }
 }

@@ -10,20 +10,34 @@ const DarkMode = () => {
 
   // Setting value for either light or dark in local storage
   if (localStorage) {
-    theme = localStorage.getq('theme');
+    theme = localStorage.getItem('theme');
   }
   // Whichever theme is chosen would be apply the css class to the body
   if (theme === lightTheme || theme === darkTheme) {
     body.classList.add(theme);
   } else {
     // If no theme is chosen by default the light class will be applied
-    body.classLight.add(lightTheme);
+    body.classList.add(lightTheme);
   }
 
-  // Checks which them is currently active
+  // Checks which theme is currently active
   const switchTheme = (e) => {
+    // If dark theme is active it will be replaced with light theme
+    // Removes the click class from the dark button
+    // Changes theme property to light
     if (theme === darkTheme) {
-      body.classLight.replace(darkTheme, lightTheme);
+      body.classList.replace(darkTheme, lightTheme);
+      e.target.classList.remove(clickedClass);
+      localStorage.setItem('theme', 'light');
+      theme = lightTheme;
+    } else {
+      // IF the dark theme was off it will turn it on
+      // Remove click class
+      // Set theme property to dark
+      body.classList.replace(lightTheme, darkTheme);
+      e.target.classList.add(clickedClass);
+      localStorage.setItem('teme', 'dark');
+      theme = darkTheme;
     }
   };
 
