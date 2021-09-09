@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: Gotham Rounded, sans-serif;
 }
+
+:root {
+  --black: black;
+  --white: whitesmoke;
+}
 body {
   background: white;
   display: flex;
@@ -11,6 +16,14 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+}
+
+body.light {
+  background-color: var(--white);
+}
+
+body.dark {
+  background-color: var(--black);
 }
 
 .clock {
