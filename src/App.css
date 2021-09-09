@@ -10,7 +10,7 @@
   --white: whitesmoke;
 }
 body {
-  background: white;
+  background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
