@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Clock from './components/Clock';
 import DarkMode from './components/DarkMode';
+import CurrentTime from './components/CurrentTime';
 import './App.css';
 import { render } from 'react-dom';
 
@@ -46,6 +47,7 @@ class App extends Component {
             minutesTimer={minutesTimer}
             hoursTimer={hoursTimer}
           />
+          <CurrentTime />
         </div>
       </>
     );
