@@ -26,22 +26,6 @@ body.dark {
   background-color: var(--black);
 }
 
-/* h3 {
-  color: var(--green);
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: var(color);
-}
-
-h3.light {
-  color: var(--black);
-}
-
-h3.dark {
-  color: var(--white);
-} */
-
 .clock {
   color: white;
   width: 300px;
